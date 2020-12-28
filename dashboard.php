@@ -91,9 +91,9 @@
 
         </div>
         <div class="row">
-            <div class="col-lg-3 col-lg-offset-1 " style="color: #fff;background-color: #0091EA;">
+            <div class="col-lg-3 col-lg-offset-1 " style="color: #fff;background-color: #383838;">
                 <h1 ><i>Account</i></h1>
-                <form action="signin.php" method="post">
+                <form action="index.php?id=success" method="post">
                     <div class="form-group">
                         <label>FullSend ID</label>
                         <input type="text" class="form-control " name="username" id="username" PLACEHOLDER="" value="<?php echo $n;?>" readonly>
@@ -101,7 +101,9 @@
                     <div class="form-group">
                         <label>Use the above ID to receive money</label>
                         <br>
-                        <a href="index.php?id=success" style="color: white;">Log Out</a>
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn-danger" name="logout" id="logout" value="logout" PLACEHOLDER="LOGOUT">
+                        </div>
                     </div>
 
                 </form>
@@ -207,5 +209,6 @@
         else if ($error == "successs") echo  "<script>swal(\"Success\", \"Rechharge Success\", \"success\");</script>";
         else if ($error == "successp") echo  "<script>swal(\"Success\", \"Pay Success\", \"success\");</script>";
         else if ($error == "insufficient") echo "<script>swal(\"Error\", \"Insufficient funds\", \"error\");</script>";
+        else if ($error == "invalid") echo "<script>swal(\"Error\", \"User does not exist\", \"error\");</script>";
     }
 ?>

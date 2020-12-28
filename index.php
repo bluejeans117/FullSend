@@ -41,7 +41,7 @@
     <script srdc="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     </head>
-    <body class="bg-blue-active ">
+    <body class="bg-blue-active">
     <br>
 
     <div class="row" style="background-color: #FFC107;">
@@ -52,7 +52,7 @@
 
     </div>
     <div class="row">
-        <div class="col-lg-3 col-lg-offset-1 " style="color: #fff;background-color: #0091EA;">
+        <div class="col-lg-3 col-lg-offset-1 " style="color: #fff;background-color: #383838;">
             <h1 ><i>Sign In</i></h1>
             <form action="signin.php" method="post">
                 <div class="form-group">
@@ -96,7 +96,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-md-3" style="background-color: #0091EA;">
+        <div class="col-md-3" style="background-color: #383838;">
             <div class="row-center">
 
                 <h1 style="margin: 5% 0 0 5%;" ><i>We are </i></h1>
@@ -171,5 +171,6 @@
         else if ($error == "uname_pw") echo  "<script>swal(\"Error\", \"Username or Password Incorrect!\", \"error\");</script>";
         else if ($error == "no_user") echo  "<script>swal(\"Error\", \"Unable to connect to database. Please try creating a new account\", \"error\");</script>";
         else if ($error == "connection_err") echo  "<script>swal(\"Error\", \"Connection lost! Please check your Internet\", \"error\");</script>";
+        else if ($error == "success") echo  "<script>swal(\"Success\", \"Logged out successfully\", \"success\");</script>";
     }
 ?>
