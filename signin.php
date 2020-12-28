@@ -1,38 +1,40 @@
 <?php
-$name  = md5($_POST['username']);
-$pwd = md5($_POST['password']);
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "ewallet";
+    $name  = $_POST['username'];
+    $pwd = md5($_POST['password']);
+    $servername = "localhost";
+    $username = "root";
+    $password = "YES";
+    $dbname = "ewallet";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-$sql = "select * from users";
-$result = $conn->query($sql);
+    $sql = "select name, password from users";
+    $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo $row['name']." ".$name."\n";
-        echo $row['password']." ".$pwd."\n";
-        if($row['name']==$name && $row['password']==$pwd) {
-            $url = "Location:dashboard.php?name=$name";
-            echo "if";
+    try {
+        if (!empty($result) && $result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                if($row['name']==$name && $row['password']==$pwd) {
+                    $url = "Location:dashboard.php?name=$name";
+                    echo "if";
+                    header($url);
+                    $found = true;
+                }
+            }
+            if (!($found)) throw new Exception("");
+        } else {
+            echo "else";
+            $url="Location:index.php?id=uname_pw";
             header($url);
         }
+    } catch (Exception $e){
+        $url="Location:index.php?id=no_user";
+        header($url);
+        $conn->close();
     }
-} else {
-    echo "else";
-    $url="Location:index.php?id=errorp";
-   header($url);
-}
-$url="Location:index.php?id=errorp";
-#header($url);
-$conn->close();
 ?>
