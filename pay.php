@@ -3,13 +3,12 @@
     $n=$_POST['mobile'];
     $to=$_POST['id'];
     $amt =$_POST['amt'];
-
+    $servername = "localhost";
+    $username = "root";
+    $password = "YES";
+    $dbname = "ewallet";
+        
     if ($b >= $amt) {
-        $servername = "localhost";
-        $username = "root";
-        $password = "YES";
-        $dbname = "ewallet";
-        $b=$_POST['bal'];
         $bal=null;
         $name=null;
         $exists=false;
@@ -21,6 +20,7 @@
             $url="Location:index.php?id=connection_lost";
             header($url);
         }
+
         $sql1 = "select * from users";
         $result = $conn->query($sql1);
 
@@ -74,7 +74,7 @@
                 echo "Error updating record: " . $conn->error;
             }
         } else {
-            $url="Location:dashboard.php?id=invalid";
+            $url="Location:dashboard.php?id=invalid&name=$name";
             header($url);
         }
     }

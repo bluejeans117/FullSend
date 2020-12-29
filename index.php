@@ -42,89 +42,90 @@
     <![endif]-->
     </head>
     <body class="bg-blue-active">
-    <br>
+        <br>
+        <div class="row" style="background-color: #FFC107;">
+            <div class="col-md-6 col-lg-offset-1" >
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a href="#" class="navbar-brand" style="color: #fff; margin: -0% 0 0 0;font-size: 35px;">
+                    <b><i>FullSend - The Better Financial Solution</i></b>
+                </a>
+            </div>
 
-    <div class="row" style="background-color: #FFC107;">
-        <div class="col-md-6 col-lg-offset-1" >
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a href="#" class="navbar-brand" style="color: #fff; margin: -0% 0 0 0;font-size: 35px;"><b><i>FullSend - The Better Financial Solution</i></b></a>
         </div>
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-1 " style="color: #fff;background-color: #383838;">
+                <h1 ><i>Sign In</i></h1>
+                <form action="signin.php" method="post">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" class="form-control " name="username" id="username" PLACEHOLDER="Username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control " name="password" id="password" PLACEHOLDER="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-control btn-bitbucket" name="submit" id="submit" value="Sign In" PLACEHOLDER="Username">
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 " style="background-color: #FFC107;color:#1A237E;">
+                <h1 ><i>Sign Up with Us..</i></h1>
+                <form action="signup.php" method="post">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" class="form-control " name="username" id="username1" PLACEHOLDER="Username">
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile</label>
+                        <input type="text" class="form-control " name="mobile" id="mobile" PLACEHOLDER="Mobile">
+                    </div>
+                    <div class="form-group">
+                        <label>Card No</label>
+                        <input type="text" class="form-control " name="card" id="card" PLACEHOLDER="Card No">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control " name="password" id="password1" PLACEHOLDER="Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control " name="confirmpassword" id="cofirmpassword" PLACEHOLDER="Confirm Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-control btn-bitbucket" name="submit" id="submit1" value="Sign In" PLACEHOLDER="Username">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3" style="background-color: #383838;">
+                <div class="row-center">
 
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-lg-offset-1 " style="color: #fff;background-color: #383838;">
-            <h1 ><i>Sign In</i></h1>
-            <form action="signin.php" method="post">
-                <div class="form-group">
-                    <label>User Name</label>
-                    <input type="text" class="form-control " name="username" id="username" PLACEHOLDER="Username">
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control " name="password" id="password" PLACEHOLDER="Password">
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="form-control btn-bitbucket" name="submit" id="submit" value="Sign In" PLACEHOLDER="Username">
-                </div>
-            </form>
-        </div>
-        <div class="col-lg-4 " style="background-color: #FFC107;color:#1A237E;">
-            <h1 ><i>Sign Up with Us..</i></h1>
-            <form action="signup.php" method="post">
-                <div class="form-group">
-                    <label>User Name</label>
-                    <input type="text" class="form-control " name="username" id="username1" PLACEHOLDER="Username">
-                </div>
-                <div class="form-group">
-                    <label>Mobile</label>
-                    <input type="text" class="form-control " name="mobile" id="mobile" PLACEHOLDER="Mobile">
-                </div>
-                <div class="form-group">
-                    <label>Card No</label>
-                    <input type="text" class="form-control " name="card" id="card" PLACEHOLDER="Card No">
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control " name="password" id="password1" PLACEHOLDER="Password">
-                </div>
-                <div class="form-group">
-                    <label>Confirm Password</label>
-                    <input type="password" class="form-control " name="confirmpassword" id="cofirmpassword" PLACEHOLDER="Confirm Password">
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="form-control btn-bitbucket" name="submit" id="submit1" value="Sign In" PLACEHOLDER="Username">
-                </div>
-            </form>
-        </div>
-        <div class="col-md-3" style="background-color: #383838;">
-            <div class="row-center">
-
-                <h1 style="margin: 5% 0 0 5%;" ><i>We are </i></h1>
-
-            <div class="col-md-4 ">
-                <h1 ><i class="fa fa-shield" style="font-size: 75px" aria-hidden="true"></i></h1>
-            </div>
-            <div class="col-md-4 ">
-                <h1 ><i class="fa fa-unlink (alias)" style="font-size: 75px" aria-hidden="true"></i></h1>
-            </div>
-            <div class="col-md-4 ">
-                <h1 ><i class="fa  fa-fighter-jet" style="font-size: 75px" aria-hidden="true"></i></h1>
-            </div>
-            </div>
-            <div class="row">
+                    <h1 style="margin: 5% 0 0 5%;" ><i>We are </i></h1>
 
                 <div class="col-md-4 ">
-                    <h3>Secure</h3>
+                    <h1 ><i class="fa fa-shield" style="font-size: 75px" aria-hidden="true"></i></h1>
                 </div>
                 <div class="col-md-4 ">
-                    <h3>Private</h3>
+                    <h1 ><i class="fa fa-unlink (alias)" style="font-size: 75px" aria-hidden="true"></i></h1>
                 </div>
                 <div class="col-md-4 ">
-                    <h3 >Fast</h3>
+                    <h1 ><i class="fa  fa-fighter-jet" style="font-size: 75px" aria-hidden="true"></i></h1>
+                </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4 ">
+                        <h3>Secure</h3>
+                    </div>
+                    <div class="col-md-4 ">
+                        <h3>Private</h3>
+                    </div>
+                    <div class="col-md-4 ">
+                        <h3 >Fast</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </body>
     <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
